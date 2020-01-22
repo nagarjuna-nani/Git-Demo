@@ -1,9 +1,10 @@
-node('docker'){
+node('new node'){
     
 
     stage('Clone repository') {
         
         git 'https://github.com/nagendra464/docekr.git'
+        checkout scm 
         
     }    
     stage('Build image') {
