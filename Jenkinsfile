@@ -3,7 +3,7 @@ node{
 
     stage('Clone repository') {
         
-        git 'https://github.com/nagendra464/docekr.git'
+      git 'https://github.com/nagarjuna-nani/Git-Demo.git'
         checkout scm 
         
     }    
