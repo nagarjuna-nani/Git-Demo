@@ -18,5 +18,8 @@ node{
     }
         sh label: '', script: 'docker push docker797/naglogin:1'
     }
+    stage('Run Container'){
+    sh label: '', script: 'docker run --name Final -d -p 8081:8080 docker797/naglogin:1'
+    }
         
 }
