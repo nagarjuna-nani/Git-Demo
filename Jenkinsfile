@@ -1,4 +1,4 @@
-node('new node'){
+node{
     
 
     stage('Clone repository') {
