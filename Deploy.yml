@@ -12,10 +12,10 @@ spec:
   template:
    metadata:
     labels:
-	 app: myapp
+     app: myapp
    spec:
     containers:
-	- name: my-container
-	  image: docker797/deployimage:1
-	  ports:
-	  -containerPort: 8080
+    - name: my-container
+      image: docker797/deployimage:1
+      ports:
+      -containerPort: 8080
