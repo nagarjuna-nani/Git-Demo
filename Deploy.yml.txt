@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Deployment
+metadata:
+  name: app-deploy
+  labels: 
+   app: myapp
+spec:
+  replicas: 2
+  selector:
+   matchlabels:
+    app: myapp
+  template:
+   metadata:
+    labels:
+	 app: myapp
+   spec:
+    containers:
+	- name: my-container
+	  image: docker797/deployimage:1
+	  ports:
+	  -containerPort: 8080
