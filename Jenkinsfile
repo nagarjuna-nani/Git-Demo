@@ -1,5 +1,5 @@
-pipeline{
-    node any
+pipeline {
+    agent any
     environment{
       tag = getdockertag()
     }
