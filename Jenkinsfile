@@ -4,23 +4,23 @@ pipeline {
       tag = getdockertag()
     }
     stages{
-        stage{
-            steps('Clone repository') {
+        stage('Clone repository'){
+            steps {
         
       git 'https://github.com/nagarjuna-nani/Git-Demo.git'
         checkout scm 
             }
     }    
-        stage{
-            steps('Build image') {
+        stage('Build image'){
+            steps {
        
 
         sh label: '', script: 'docker build . -t docker797/deployimage:${tag}'
   
             }
     }       
-        stage{
-            steps('push image'){
+        stage('push image'){
+            steps{
         withCredentials([string(credentialsId: 'docker-new', variable: 'newone')])  {
             sh label: '', script: "docker login -u docker797 -p ${password}"
     }
