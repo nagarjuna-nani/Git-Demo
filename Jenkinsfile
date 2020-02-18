@@ -12,7 +12,7 @@ node{
     stage('Build image') {
        
 
-        sh label: '', script: 'docker build -t docker797/deployimage:${tag} .'
+        sh label: '', script: 'docker build . -t docker797/deployimage:${tag}'
     }
     stage('push image'){
         withCredentials([string(credentialsId: 'docker-new', variable: 'newone')])  {
